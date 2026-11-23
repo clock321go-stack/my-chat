@@ -377,12 +377,13 @@
                 </div>
 
                 <div class="chat-input-area">
-                    <input type="file" id="media-input" accept="*/*" style="display:none;" onchange="handleMediaSelect(event)">
+                    <input type="file" id="gallery-input" accept="image/*,video/*" style="display:none;" onchange="handleMediaSelect(event)">
+                    <input type="file" id="media-input" accept="application/pdf,.pdf,*/*" style="display:none;" onchange="handleMediaSelect(event)">
                     <div class="input-pill-box">
                         <i class="far fa-smile emoji-open-btn" onclick="togglePickerTray()"></i>
                         <input type="text" id="msg-input" placeholder="Message" class="message-input" onfocus="closePickerTray()" oninput="handleInputTyping()" onkeypress="if(event.key==='Enter') sendMessage()">
                         <i class="fas fa-plus plus-btn" id="inline-plus-btn" onclick="document.getElementById('media-input').click()"></i>
-                        <i class="fas fa-camera cam-inline-btn" id="inline-cam-btn" onclick="document.getElementById('media-input').click()"></i>
+                        <i class="fas fa-camera cam-inline-btn" id="inline-cam-btn" onclick="document.getElementById('gallery-input').click()"></i>
                     </div>
                     
                     <button type="button" class="action-btn" id="mic-btn"
@@ -510,7 +511,7 @@
         </div>
     </div>  
 
-   <script>
+    <script>
         var firebaseConfig = {
             apiKey: "AIzaSyB2WF2yUcCtIuxF7-bp4UBEEDvdITuc4No",
             authDomain: "whatsapp-40766.firebaseapp.com",
@@ -2136,4 +2137,4 @@
         }
     </script>
 </body>
-</html> 
+</html>
